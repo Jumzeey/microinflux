@@ -17,6 +17,8 @@ export default {
         'card-blue': '#063559',
         'secondary-blue': '#0D98FE',
         'light-blue': '#B4DFFF',
+        'linear-blue': '#E7F5FF',
+        'semi-black': '#0D1821',
         'primary-gray': '#FAFAFA',
         'text-gray': '#718096',
         'accent-pink': '#F56565',
@@ -55,13 +57,6 @@ export default {
         fontFamily: {
           sfpro: ['SF Pro Display', 'sans-serif'],
         },
-        fontWeight: {
-          light: 300,
-          regular: 400,
-          medium: 500,
-          semibold: 600,
-          bold: 700,
-        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -81,7 +76,7 @@ export default {
         },
       },
       animation: {
-        shake: 'shake 1s ease-in-out 3s infinite',
+        shake: 'shake 1s ease-in-out 3s 10',
       },
     },
   },
