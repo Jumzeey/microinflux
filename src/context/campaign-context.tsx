@@ -2,10 +2,14 @@ import { createContext, useContext, useState, ReactNode } from 'react';
 import { Campaign, CampaignContextType } from '../types/campaign-types';
 import { campaignRepository } from '../repositories/campaign-repository';
 
-const CampaignContext = createContext<CampaignContextType | undefined>(undefined);
+const CampaignContext = createContext<CampaignContextType | undefined>(
+  undefined
+);
 
 export const CampaignProvider = ({ children }: { children: ReactNode }) => {
-  const [campaigns, setCampaigns] = useState<Campaign[]>(campaignRepository.getCampaigns());
+  const [campaigns, setCampaigns] = useState<Campaign[]>(
+    campaignRepository.getCampaigns()
+  );
 
   const addCampaign = (campaign: Campaign) => {
     const updatedCampaigns = campaignRepository.addCampaign(campaign);

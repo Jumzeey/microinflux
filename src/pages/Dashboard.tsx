@@ -1,7 +1,13 @@
-const Dashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
-}
+import { NavBar } from "@/components";
 
-export default Dashboard
+const Dashboard: React.FC = () => {
+  return (
+    <>
+      <div className="p-4">
+        <NavBar />
+      </div>
+    </>
+  );
+};
+
+export default Dashboard;
