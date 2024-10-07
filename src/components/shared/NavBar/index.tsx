@@ -15,8 +15,8 @@ const Navbar = () => {
                     <Button className='bg-primary-blue'>
                         <Plus className="mr-2 h-4 w-4" /> Create a New Campaign
                     </Button>
-                    <img src={message} alt="Message Icon" className='cursor-pointer'/>
-                    <img src={notification} alt="Notification Icon" className='cursor-pointer' />
+                    <img src={message} alt="Message Icon" className='cursor-pointer animate-shake hover:animate-none'/>
+                    <img src={notification} alt="Notification Icon" className='cursor-pointer animate-shake hover:animate-none' />
                 </div>
             </div>
         </>
