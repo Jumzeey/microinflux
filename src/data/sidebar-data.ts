@@ -2,6 +2,7 @@ export interface Profile {
   name: string;
   role: string;
   avatar: string;
+  about: string
 }
 
 export interface NavigationItem {
@@ -29,6 +30,8 @@ export const sidebarData: SidebarData = {
     role: 'Lifestyle Influencer',
     avatar:
       'https://ik.imagekit.io/jumzeey/microflux/Profile_dXWYAagBi.svg?updatedAt=1728291722916',
+    about:
+      'Complete your profile with details showcasing your skills and personality. Stand out and attract more opportunities.',
   },
   navigation: [
     {

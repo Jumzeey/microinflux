@@ -1,5 +1,6 @@
 import { NavBar } from "@/components";
 import ProfileOverview from "@/components/dashboard/ProfileOverview";
+import ProfileInfo from "@/components/dashboard/ProfileInfo";
 
 const Dashboard: React.FC = () => {
   return (
@@ -8,8 +9,9 @@ const Dashboard: React.FC = () => {
         <div className="mb-6">
           <NavBar />
         </div>
-        <div className="mb-6 flex">
+        <div className="mb-6 flex gap-4">
           <ProfileOverview />
+          <ProfileInfo />
         </div>
       </div>
     </>

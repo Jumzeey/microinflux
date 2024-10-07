@@ -14,8 +14,9 @@ export default {
       },
       colors: {
         'primary-blue': '#053559',
+        'card-blue': '#063559',
         'secondary-blue': '#0D98FE',
-        'light-blue': '#E7F5FF',
+        'light-blue': '#B4DFFF',
         'primary-gray': '#FAFAFA',
         'text-gray': '#718096',
         'accent-pink': '#F56565',
