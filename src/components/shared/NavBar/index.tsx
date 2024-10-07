@@ -9,10 +9,10 @@ const Navbar = () => {
         <>
             <div className="w-full flex justify-between items-center">
                 <div>
-                    <p>Dashboard</p>
+                    <p className='font-sfpro'>Dashboard</p>
                 </div>
                 <div className="flex gap-6">
-                    <Button>
+                    <Button className='bg-primary-blue'>
                         <Plus className="mr-2 h-4 w-4" /> Create a New Campaign
                     </Button>
                     <img src={message} alt="Message Icon" className='cursor-pointer'/>
