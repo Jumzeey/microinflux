@@ -1,6 +1,11 @@
 export interface Campaign {
-  id: number;
-  name: string;
+  channels: string[];
+  budget: string;
+  id: string;
+  brand: string;
+  title: string;
+  category: string;
+  description: string;
 }
 
 export interface CampaignContextType {

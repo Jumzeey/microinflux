@@ -7,13 +7,21 @@ class CampaignRepository {
     this.campaigns = [];
   }
 
+  // Get all campaigns
   getCampaigns(): Campaign[] {
-    return this.campaigns;
+    return [...this.campaigns];
   }
 
+  // Add a new campaign
   addCampaign(campaign: Campaign): Campaign[] {
-    this.campaigns.push(campaign);
-    return this.campaigns;
+    const exists = this.campaigns.some(
+      existingCampaign => existingCampaign.id === campaign.id
+    );
+    if (exists) {
+      throw new Error(`Campaign with ID ${campaign.id} already exists.`);
+    }
+    this.campaigns = [...this.campaigns, campaign];
+    return this.getCampaigns();
   }
 }
 

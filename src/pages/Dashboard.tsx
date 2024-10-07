@@ -8,66 +8,13 @@ import ProfileInfo from "@/components/dashboard/ProfileInfo";
 import SearchBar from "@/components/shared/SearchBar";
 import DropdownSelect from "@/components/shared/SelectDropdown";
 import CampaignCard from '@/components/campaign/card';
+import { useCampaigns } from '@/context/campaign-context';
+import { CampaignProvider } from '@/context/campaign-context'; 
 
 
 const Dashboard: React.FC = () => {
-  // Example campaign data
-  const campaigns = [
-    {
-      title: "Epic Social Buzz",
-      company: "Samsung",
-      category: "Product Review",
-      postedDaysAgo: 2,
-      description: "Aliquam massa donec proin sit duis magna eu maecenas. Ultricies id mattis lobortis proin congue proin elementum. Sed ac porttitor metus ante et su...",
-      channels: ["instagram", "tiktok", "youtube", "twitter", "facebook"],
-      budget: "$1000 - $2,000"
-    },
-    {
-      title: "Tech Review Challenge",
-      company: "Apple",
-      category: "Gadget Review",
-      postedDaysAgo: 1,
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.",
-      channels: ["youtube", "twitter"],
-      budget: "$500 - $1,500"
-    },
-    {
-      title: "Fitness Frenzy",
-      company: "Nike",
-      category: "Health & Fitness",
-      postedDaysAgo: 5,
-      description: "Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam.",
-      channels: ["instagram", "tiktok"],
-      budget: "$2,000 - $5,000"
-    },
-    {
-      title: "Food Review Fiesta",
-      company: "McDonald's",
-      category: "Food Review",
-      postedDaysAgo: 3,
-      description: "Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.",
-      channels: ["instagram", "facebook"],
-      budget: "$700 - $1,200"
-    },
-    {
-      title: "Gamer's Paradise",
-      company: "Sony",
-      category: "Game Review",
-      postedDaysAgo: 4,
-      description: "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.",
-      channels: ["youtube", "twitch"],
-      budget: "$1,500 - $3,000"
-    },
-    {
-      title: "Fashion Forward",
-      company: "Gucci",
-      category: "Fashion Review",
-      postedDaysAgo: 7,
-      description: "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.",
-      channels: ["instagram", "tiktok", "pinterest"],
-      budget: "$2,500 - $4,000"
-    }
-  ];
+  const { campaigns } = useCampaigns();
+
 
   return (
     <>
@@ -106,7 +53,7 @@ const Dashboard: React.FC = () => {
             <CampaignCard
               key={index}
               title={campaign.title}
-              company={campaign.company}
+              company={campaign.brand}
               category={campaign.category}
               description={campaign.description}
               channels={campaign.channels}
@@ -119,4 +66,12 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+const DashboardWithProvider: React.FC = () => {
+  return (
+    <CampaignProvider>
+      <Dashboard />
+    </CampaignProvider>
+  );
+};
+
+export default DashboardWithProvider;

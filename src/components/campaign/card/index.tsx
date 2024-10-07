@@ -48,12 +48,15 @@ const CampaignCard: React.FC<CampaignCardProps> = ({
                 <p className="text-gray-700 font-semibold">Channels</p>
                 <div className="flex items-center space-x-3 mt-2">
                     {channels.slice(0, 5).map((channel, index) => (
+                        <>
+                        <p>{channel}</p>
                         <img
                             key={index}
-                            src={`/icons/${channel}.svg`}
+                            src={`@/assets/icons/${channel}.svg`}
                             alt={channel}
                             className="h-6 w-6"
                         />
+                        </>
                     ))}
                     {channels.length > 5 && (
                         <span className="text-gray-500">+ {channels.length - 5} more</span>
