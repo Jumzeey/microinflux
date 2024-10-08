@@ -22,13 +22,13 @@
 
 ## Table of Contents
 
-🕸️ [Features](#features)
-🕸️ [Project Structure](#project-structure)
-🕸️ [Technologies Used](#technologies-used)
-🕸️ [Installation](#installation)
-🕸️ [Gallery](#gallery)
-🕸️ [Snippets](#snippets)  
-🕸️ [Footnote](#footnote)
+🕸️ [Features](#features) </br>
+🕸️ [Project Structure](#project-structure) </br>
+🕸️ [Technologies Used](#technologies-used) </br>
+🕸️ [Installation](#installation) </br>
+🕸️ [Gallery](#gallery) </br>
+🕸️ [Snippets](#snippets)  </br>
+🕸️ [Footnote](#footnote)</br>
 
 ## 🔋 Features
 
