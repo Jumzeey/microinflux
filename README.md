@@ -55,38 +55,40 @@
 
 ## Project Structure
 
-src/ </br>
-├── assets/ # Static assets</br>
-│ ├── fonts/ # Font files</br>
-│ ├── icons/ # Icon files</br>
-│ └── images/ # Image files</br>
-├── components/ # Reusable React components</br>
-│ ├── campaign/ # Campaign-related components</br>
-│ ├── dashboard/ # Dashboard components</br>
-│ ├── shared/ # Shared components (used across multiple features)</br>
-│ └── ui/ # UI components (buttons, forms, etc.)</br>
-│ └── index.ts # Export file for UI components</br>
-├── context/ # React context for state management</br>
-│ └── campaign-context.tsx # Context for campaign-related state</br>
-├── data/ # Data fetching and mock data</br>
-│ ├── categories-data.ts # Category-related data</br>
-│ ├── profile-overview-data.ts # Profile overview data</br>
-│ └── sidebar-data.ts # Sidebar data for navigation</br>
-├── lib/ # Library for utility functions (currently empty)</br>
-├── pages/ # Page components</br>
-│ ├── Dashboard.tsx # Dashboard page</br>
-│ ├── RootLayout.tsx # Root layout component</br>
-│ └── index.ts # Export file for page components</br>
-├── repositories/ # Repositories for handling data interactions</br>
-│ └── campaign-repository.ts # Campaign-specific repository</br>
-├── types/ # TypeScript types and interfaces</br>
-│ └── campaign-types.ts # Types related to campaigns</br>
-├── utils/ # Utility functions</br>
-│ ├── gravatar-generator.ts # Gravatar generation utility</br>
-│ └── shorten-text.ts # Utility to shorten text strings</br>
-├── App.tsx # Main application component</br>
-├── index.css # Global CSS</br>
-├── main.tsx # Entry point for the app</br>
+```
+src/
+├── assets/                 # Static assets
+│   ├── fonts/             # Font files
+│   ├── icons/             # Icon files
+│   └── images/            # Image files
+├── components/             # Reusable React components
+│   ├── campaign/          # Campaign-related components
+│   ├── dashboard/         # Dashboard components
+│   ├── shared/            # Shared components (used across multiple features)
+│   └── ui/                # UI components (buttons, forms, etc.)
+│       └── index.ts       # Export file for UI components
+├── context/                # React context for state management
+│   └── campaign-context.tsx # Context for campaign-related state
+├── data/                   # Data fetching and mock data
+│   ├── categories-data.ts  # Category-related data
+│   ├── profile-overview-data.ts # Profile overview data
+│   └── sidebar-data.ts     # Sidebar data for navigation
+├── lib/                    # Library for utility functions (currently empty)
+├── pages/                  # Page components
+│   ├── Dashboard.tsx       # Dashboard page
+│   ├── RootLayout.tsx      # Root layout component
+│   └── index.ts            # Export file for page components
+├── repositories/           # Repositories for handling data interactions
+│   └── campaign-repository.ts # Campaign-specific repository
+├── types/                  # TypeScript types and interfaces
+│   └── campaign-types.ts    # Types related to campaigns
+├── utils/                  # Utility functions
+│   ├── gravatar-generator.ts # Gravatar generation utility
+│   └── shorten-text.ts     # Utility to shorten text strings
+├── App.tsx                 # Main application component
+├── index.css               # Global CSS
+└── main.tsx                # Entry point for the app
+```
 
 ## ⚙️ Technologies Used
 
