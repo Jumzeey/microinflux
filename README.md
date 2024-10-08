@@ -96,7 +96,6 @@ src/
 - **TypeScript**: Adds static typing to JavaScript, ensuring code correctness
 - **Vite**: A build tool that aims to provide a faster and leaner development experience
 - **Tailwind CSS**: A utility-first CSS framework
-- **React Query**: Data fetching and caching library
 - **Lucide React**: Icon library used for rendering icons
 - **ShadCN UI**: Component library for building user interfaces
 - **Gravatar**: Used for generating dynamic user avatars
@@ -135,13 +134,24 @@ Below are some dummy screenshots of the app on mobile and desktop views.
 
 ### Mobile View
 
-![Mobile Screenshot](https://via.placeholder.com/300x600?text=Mobile+Screenshot)
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://via.placeholder.com/300x600?text=Mobile+Screenshot+1" alt="Mobile Screenshot 1" width="300" />
+  <img src="https://via.placeholder.com/300x600?text=Mobile+Screenshot+2" alt="Mobile Screenshot 2" width="300" />
+  <img src="https://via.placeholder.com/300x600?text=Mobile+Screenshot+3" alt="Mobile Screenshot 3" width="300" />
+  <img src="https://via.placeholder.com/300x600?text=Mobile+Screenshot+4" alt="Mobile Screenshot 4" width="300" />
+</div>
+
 _Resolution: 300x600px_
 
 ### Desktop View
 
-![Desktop Screenshot](https://via.placeholder.com/1024x768?text=Desktop+Screenshot)
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://via.placeholder.com/1024x768?text=Desktop+Screenshot+1" alt="Desktop Screenshot 1" width="500" />
+  <img src="https://via.placeholder.com/1024x768?text=Desktop+Screenshot+2" alt="Desktop Screenshot 2" width="500" />
+</div>
+
 _Resolution: 1024x768px_
+
 
 ## 🕸️ Snippets
 
