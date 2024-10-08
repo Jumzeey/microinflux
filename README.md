@@ -135,19 +135,22 @@ Below are some dummy screenshots of the app on mobile and desktop views.
 ### Mobile View
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://via.placeholder.com/300x600?text=Mobile+Screenshot+1" alt="Mobile Screenshot 1" width="300" />
-  <img src="https://via.placeholder.com/300x600?text=Mobile+Screenshot+2" alt="Mobile Screenshot 2" width="300" />
-  <img src="https://via.placeholder.com/300x600?text=Mobile+Screenshot+3" alt="Mobile Screenshot 3" width="300" />
-  <img src="https://via.placeholder.com/300x600?text=Mobile+Screenshot+4" alt="Mobile Screenshot 4" width="300" />
+  <img src="https://ik.imagekit.io/jumzeey/devheit/iPhone-13-PRO-localhost_tIEoGo7T5.png?updatedAt=1728412469156" alt="Mobile Screenshot 1" width="300" />
+  <img src="https://ik.imagekit.io/jumzeey/devheit/iPhone-13-PRO-localhost%20(1)_rGs36dBb0L.png?updatedAt=1728412469336" alt="Mobile Screenshot 2" width="300" />
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://ik.imagekit.io/jumzeey/devheit/iPhone-13-PRO-localhost%20(2)_R0t8ESzf6.png?updatedAt=1728412469056" alt="Mobile Screenshot 3" width="300" />
+  <img src="https://ik.imagekit.io/jumzeey/devheit/iPhone-13-PRO-localhost%20(3)_xm69MccIw.png?updatedAt=1728412469109" alt="Mobile Screenshot 4" width="300" />
 </div>
 
 _Resolution: 300x600px_
 
 ### Desktop View
 
-<div style="display: flex; justify-content: space-between;">
-  <img src="https://via.placeholder.com/1024x768?text=Desktop+Screenshot+1" alt="Desktop Screenshot 1" width="500" />
-  <img src="https://via.placeholder.com/1024x768?text=Desktop+Screenshot+2" alt="Desktop Screenshot 2" width="500" />
+<div style="display: flex; flex-direction:column;">
+  <img src="https://ik.imagekit.io/jumzeey/devheit/Macbook-Air-localhost%20(1)_FC4-okbow.png?updatedAt=1728412469598" alt="Desktop Screenshot 1" width="500" />
+  <img src="https://ik.imagekit.io/jumzeey/devheit/Macbook-Air-localhost%20(2)_tPGx1Sy8y.png?updatedAt=1728412469739" alt="Desktop Screenshot 2" width="500" />
+  <img src="https://ik.imagekit.io/jumzeey/devheit/Macbook-Air-localhost%20(3)_jQG7rINxj.png?updatedAt=1728412469740" alt="Desktop Screenshot 2" width="500" />
 </div>
 
 _Resolution: 1024x768px_
