@@ -161,7 +161,7 @@ _Resolution: 1024x768px_
 <details>
 <summary><code>src/components/CampaignCard.tsx</code></summary>
 
-````tsx
+```tsx
 import React from 'react';
 import { getInitials, getBackgroundColor } from '@/utils/avatarUtils';
 
@@ -194,11 +194,14 @@ const CampaignCard: React.FC<CampaignCardProps> = ({ title, budget, user }) => {
 };
 
 export default CampaignCard;
+```
+
 </details>
+
 <details>
 <summary><code>src/utils/avatarUtils.ts</code></summary>
 
-````ts
+```ts
 export function getInitials(name: string): string {
   const initials = name
     .split(' ')
@@ -214,10 +217,167 @@ export function getBackgroundColor(name: string): string {
     .reduce((acc, char) => acc + char.charCodeAt(0), 0);
   return colors[charCodeSum % colors.length];
 }
+```
+
 </details>
 
+<details>
+<summary><code>src/pages/RootLayout.tsx</code></summary>
+
+```tsx
+import { SideBar } from '@/components';
+import { Outlet } from 'react-router-dom';
+
+const RootLayout: React.FC = () => {
+  return (
+    <div className="h-full flex ">
+      <div className="hidden md:block lg:block">
+        <SideBar />
+      </div>
+      <div className="flex-1 w-full lg:ml-[320px] md:ml-[320px]">
+        <Outlet />
+      </div>
+    </div>
+  );
+};
+
+export default RootLayout;
+
+```
+
+</details>
+
+<details>
+<summary><code>src/utils/shorten-text.ts</code></summary>
+
+```ts
+/**
+ * Shortens a given text to the specified length and appends "..." if truncated.
+ * @param text - The text to be shortened.
+ * @param maxLength - The maximum length of the text.
+ * @returns The shortened text.
+ */
+export const shortenText = (text: string, maxLength: number): string => {
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  return text.substring(0, maxLength - 3) + '...';
+};
+
+```
+
+</details>
+
+<details>
+<summary><code>src/repository/campaign-repository.ts</code></summary>
+
+```ts
+import { Campaign } from '../types/campaign-types';
+
+class CampaignRepository {
+  private campaigns: Campaign[];
+
+  constructor() {
+    this.campaigns = [];
+  }
+
+  // Get all campaigns
+  getCampaigns(): Campaign[] {
+    return [...this.campaigns];
+  }
+
+  // Add a new campaign
+  addCampaign(campaign: Campaign): Campaign[] {
+    const exists = this.campaigns.some(
+      existingCampaign => existingCampaign.id === campaign.id
+    );
+    if (exists) {
+      throw new Error(`Campaign with ID ${campaign.id} already exists.`);
+    }
+    this.campaigns = [...this.campaigns, campaign];
+    return this.getCampaigns();
+  }
+
+  // Search campaigns by title
+  searchCampaigns(title: string): Campaign[] {
+    return this.campaigns.filter(campaign =>
+      campaign.title.toLowerCase().includes(title.toLowerCase())
+    );
+  }
+}
+
+export const campaignRepository = new CampaignRepository();
 
 
-````
+```
+
+</details>
+
+<details>
+<summary><code>src/context/campaign-context.ts</code></summary>
+
+```ts
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from 'react';
+import { Campaign, CampaignContextType } from '../types/campaign-types';
+import { campaignRepository } from '../repositories/campaign-repository';
+
+// Create context with type or undefined initially
+const CampaignContext = createContext<CampaignContextType | undefined>(
+  undefined
+);
+
+// Provider component
+export const CampaignProvider = ({ children }: { children: ReactNode }) => {
+  const [campaigns, setCampaigns] = useState<Campaign[]>([]);
+
+  useEffect(() => {
+    const initialCampaigns = campaignRepository.getCampaigns();
+    setCampaigns(initialCampaigns);
+  }, []);
+
+  const addCampaign = (campaign: Campaign) => {
+    try {
+      const updatedCampaigns = campaignRepository.addCampaign(campaign);
+      setCampaigns(updatedCampaigns);
+    } catch (error: any) {
+      console.error(error.message);
+    }
+  };
+
+  const searchCampaigns = (title: string) => {
+    const filteredCampaigns = campaignRepository.searchCampaigns(title);
+    setCampaigns(filteredCampaigns);
+  };
+
+  return (
+    <CampaignContext.Provider
+      value={{ campaigns, addCampaign, searchCampaigns }}
+    >
+      {children}
+    </CampaignContext.Provider>
+  );
+};
+
+// Hook to access campaigns context
+export const useCampaigns = (): CampaignContextType => {
+  const context = useContext(CampaignContext);
+  if (!context) {
+    throw new Error('useCampaigns must be used within a CampaignProvider');
+  }
+  return context;
+};
+
+
+```
+
+</details>
+
 ### Footnote
 This project was built as a test given to Jumat Adeogun for the role of Frontend Engineer. Feel free to explore and learn from the codebase!
