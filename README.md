@@ -380,4 +380,4 @@ export const useCampaigns = (): CampaignContextType => {
 </details>
 
 ### Footnote
-This project was built as a test given to Jumat Adeogun for the role of Frontend Engineer. Feel free to explore and learn from the codebase!
+This project was built as a test given to me for the role of Frontend Engineer. Feel free to explore and learn from the codebase!
