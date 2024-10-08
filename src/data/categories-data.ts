@@ -4,7 +4,7 @@ export interface CategoriesType {
 }
 
 export const categories: CategoriesType[] = [
-  { value: 'apple', label: 'Entertainment' },
-  { value: 'banana', label: 'Movies' },
-  { value: 'blueberry', label: 'Games' },
+  { value: 'Entertainment', label: 'Entertainment' },
+  { value: 'Movies', label: 'Movies' },
+  { value: 'Games', label: 'Games' },
 ];

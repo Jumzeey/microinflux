@@ -11,4 +11,5 @@ export interface Campaign {
 export interface CampaignContextType {
   campaigns: Campaign[];
   addCampaign: (campaign: Campaign) => void;
+  searchCampaigns: (title: string) => void;
 }

@@ -1,9 +1,17 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from 'react';
 import { Campaign, CampaignContextType } from '../types/campaign-types';
 import { campaignRepository } from '../repositories/campaign-repository';
 
 // Create context with type or undefined initially
-const CampaignContext = createContext<CampaignContextType | undefined>(undefined);
+const CampaignContext = createContext<CampaignContextType | undefined>(
+  undefined
+);
 
 // Provider component
 export const CampaignProvider = ({ children }: { children: ReactNode }) => {
@@ -23,8 +31,15 @@ export const CampaignProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
+  const searchCampaigns = (title: string) => {
+    const filteredCampaigns = campaignRepository.searchCampaigns(title);
+    setCampaigns(filteredCampaigns);
+  };
+
   return (
-    <CampaignContext.Provider value={{ campaigns, addCampaign }}>
+    <CampaignContext.Provider
+      value={{ campaigns, addCampaign, searchCampaigns }}
+    >
       {children}
     </CampaignContext.Provider>
   );

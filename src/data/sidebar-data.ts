@@ -2,7 +2,7 @@ export interface Profile {
   name: string;
   role: string;
   avatar: string;
-  about: string
+  about: string;
 }
 
 export interface NavigationItem {

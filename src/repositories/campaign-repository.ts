@@ -23,6 +23,13 @@ class CampaignRepository {
     this.campaigns = [...this.campaigns, campaign];
     return this.getCampaigns();
   }
+
+  // Search campaigns by title
+  searchCampaigns(title: string): Campaign[] {
+    return this.campaigns.filter(campaign =>
+      campaign.title.toLowerCase().includes(title.toLowerCase())
+    );
+  }
 }
 
 export const campaignRepository = new CampaignRepository();

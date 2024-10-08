@@ -3,7 +3,7 @@ export interface overviewSummary {
   escrow: string;
   avgIncome: string;
   escrowTotalFunds: string;
-  totalIncome: string
+  totalIncome: string;
 }
 
 export const overviewSummaryData: overviewSummary = {
@@ -13,4 +13,3 @@ export const overviewSummaryData: overviewSummary = {
   escrowTotalFunds: '$350',
   totalIncome: '$850',
 };
-
